@@ -25,6 +25,10 @@ int main()
     free(b);
     int*b2=b+1;
     printf("%d\n",(b2-b));
+
+    int*p=NULL;
+    printf("%p\n",&p);
+    printf("%p\n",p);
     
 
     return 0;
