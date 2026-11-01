@@ -98,7 +98,7 @@ bool removeNode(LinkList *head, int pos)
     {
         before_data->next = to_move->next;
         free(to_move);
-        to_move=NULL;
+        to_move = NULL;
     }
     else
     {
@@ -116,4 +116,21 @@ int getListLength(LinkList *head)
         num++;
     }
     return num;
+}
+int findLastData(LinkList *head, int last_pos)
+{
+    LinkList *fast = head->next;
+    LinkList *slow = fast;
+    int pos = 0;
+    while (pos < last_pos && fast)
+    {
+        pos++;
+        fast = fast->next;
+    }
+    while (fast)
+    {
+        fast = fast->next;
+        slow = slow->next;
+    }
+    return slow->data;
 }

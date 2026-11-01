@@ -29,6 +29,9 @@ bool removeNode(LinkList *head, int pos);
 // 获取链表长度
 int getListLength(LinkList *head);
 
+// 查找倒数第几个数据
+int findLastData(LinkList *head, int last_pos);
+
 // 删除链表
 void deleteList(LinkList *head);
 

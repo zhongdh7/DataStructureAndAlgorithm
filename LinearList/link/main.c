@@ -34,6 +34,18 @@ int main()
     printf("链表的长度是: %d\n", getListLength(head));
     printList(head);
 
+    printf("%d\n", findLastData(head, 3));
+
+    LinkList *head2 = initList();
+
+    insertHead(head2, 3);
+    insertHead(head2, 4);
+    insertHead(head2, 7);
+    insertHead(head2, 2);
+    printf("%d\n", findLastData(head2, 3));
+    printList(head2);
+
     deleteList(head);
+    deleteList(head2);
     return 0;
 }
